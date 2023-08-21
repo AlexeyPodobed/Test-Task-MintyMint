@@ -1,0 +1,96 @@
+.inner-hero {
+	$this: &;
+
+	position: relative;
+	width: 100%;
+	padding-top: 92px;
+	padding-bottom: 120px;
+	@include mobile {
+		padding-top: 90px;
+		padding-bottom: 40px;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		padding-left: 33px;
+		display: flex;
+		@include laptop {
+			padding-left: 0;
+		}
+		@include tablet {
+			align-items: center;
+		}
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&__image-wrap {
+		width: 100%;
+		max-width: 702px;
+		margin-right: 38px;
+		@include mobile {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+	&__info-wrap {
+		width: 100%;
+		max-width: 545px;
+		margin-top: 37px;
+		@include mobile {
+			margin-top: 0;
+		}
+	}
+
+	&__text {
+		max-width: 510px;
+		margin-bottom: 12px;
+	}
+
+	&__controls-wrap {
+		margin-bottom: 13px;
+		padding-left: 2px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__controls-message {
+		letter-spacing: 0.5px;
+		@include hover{
+			color: $c-blue;
+		}
+	}
+
+	&__btn-start {
+		width: fit-content;
+		min-width: 180px;
+		height: 55px;
+		margin-right: 20px;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		background: $c-blue;
+		border: 2px solid transparent;
+		transition: $time-sm;
+		@include hover {
+			background: transparent;
+			border: 2px solid $l-gray;
+			span {
+				color: $c-gray;
+			}
+		}
+		span {
+			pointer-events: none;
+		}
+	}
+
+	&__message {
+		@include mobile {
+			text-align: center;
+		}
+	}
+}

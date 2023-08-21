@@ -1,0 +1,31 @@
+.soc-list {
+	$this: &;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	li {
+		position: relative;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $s-gray;
+		border-radius: 50%;
+		transition: $time-sm;
+		@include hover{
+			background: $c-blue;
+		}
+
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+
+	img {
+		width: 12px;
+		height: 12px;
+	}
+}

@@ -1,0 +1,41 @@
+<header class="header js-header">
+	<div class="wrapper">
+		<div class="container container--sm">
+			<div class="header__inner">
+				<div class="header__left-controls">
+					<a href="#" class="header__logo-link">{{ mixins.inline('logo-sm') }}</a>
+
+					<nav class="header__nav header__nav--desktop">
+						<ul class="header__nav-list">
+							<li class="header__nav-item">
+								<a href="#" class="header__nav-link link txt txt--s color-gray">Features</a>
+							</li>
+							<li>
+								<a href="#" class="header__nav-link link txt txt--s color-gray">Pricing</a>
+							</li>
+							<li class="header__nav-drop">
+								<span class="header__nav-link txt txt--s color-gray">Pages</span>
+								<span class="header__drop-arrow"></span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__right-controls">
+					<div class="header__btn-start js-modal-button" data-modal="modal-start">
+						<span class="txt txt--s txt--semi-bold color-gray">Get started now</span>
+					</div>
+				</div>
+
+				<div class="header__burger-btn burger-btn js-burger-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+{% include 'blocks/_burger-menu.twig' %}

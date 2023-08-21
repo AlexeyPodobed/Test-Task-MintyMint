@@ -1,0 +1,126 @@
+.footer {
+	$this: &;
+
+	width: 100%;
+
+	&__inner {
+		padding-top: 136px;
+		padding-bottom: 157px;
+        @include mobile{
+            padding-top: 30px;
+            padding-bottom: 40px;
+        }
+	}
+
+	&__row {
+		width: 100%;
+		display: flex;
+        @include mobile{
+            flex-direction: column;
+        }
+	}
+
+	&__col {
+		&--first {
+			width: 100%;
+			max-width: 380px;
+            @include tabletMaxi{
+                max-width: 30%;
+            }
+            @include mobile{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+		}
+	}
+
+	&__logo {
+		margin-top: 9px;
+	}
+
+	&__menu {
+		width: calc(100% - 380px);
+		display: flex;
+		justify-content: space-between;
+        @include tabletMaxi{
+            width: 70%;
+        }
+        @include mobile{
+            width: 100%;
+        }
+	}
+	&__menu-list {
+		min-width: 225px;
+        @include tabletMaxi{
+            min-width: calc(100% / 3);
+            max-width: calc(100% / 3);
+        }
+		&:first-child {
+			min-width: 230px;
+            @include tabletMaxi{
+                min-width: calc(100% / 3);
+                max-width: calc(100% / 3);
+            }
+		}
+		&:last-child {
+			position: relative;
+			left: -3px;
+            @include tabletMaxi{
+                left: 0;
+            }
+		}
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: 3px;
+			}
+			&#{$this}__menu-title {
+				margin-bottom: 1px;
+			}
+		}
+	}
+
+	&__contols {
+		width: 100%;
+
+		background: $d-white;
+	}
+	&__contols-row {
+		width: 100%;
+		min-height: 91px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        @include mobile-midi{
+            flex-direction: column;
+            justify-content: center;
+        }
+	}
+	&__contols-list {
+        position: relative;
+        top: -11px;
+		width: 100%;
+		max-width: 320px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        @include mobile{
+            top: 0;
+            margin-bottom: 15px;
+        }
+	}
+
+    &__soc-list {
+        position: relative;
+        top: -5px;
+        @include mobile{
+            top: 0;
+        }
+    }
+
+	&--beige{
+		#{$this}__row{
+			display: none;
+		}
+	}
+}

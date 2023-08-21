@@ -1,0 +1,13 @@
+.data-animation-rotate {
+	animation: rotate 3s linear infinite;
+}
+
+
+@keyframes rotate {
+	from {
+	  transform: rotateZ(0deg);
+	}
+	to {
+	  transform: rotateZ(360deg);
+	}
+  }

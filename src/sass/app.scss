@@ -1,0 +1,42 @@
+// Basic styles
+@import "reset";
+@import "common/fonts";
+@import "vars";
+@import "mixins/general";
+@import "mixins/media";
+@import "generated/**/*";
+
+// Animations styles
+@import "common/animations";
+
+// Libs
+@import "../../node_modules/swiper/swiper";
+
+
+// Common styles
+@import "common/default";
+@import "common/typo";
+@import "common/layout";
+@import "common/links";
+
+// Blocks styles
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/soc-list";
+@import "blocks/modal-overlay";
+@import "blocks/burger-btn";
+@import "blocks/burger-menu";
+
+// Every pages styles
+// @import "pages/home/hero";
+
+
+// Home Page styles
+@import "pages/home/_inner-hero";
+@import "pages/home/device";
+@import "pages/home/blog";
+@import "pages/home/about";
+@import "pages/home/modal-start";
+
+
+

@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8"/>
+  <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}Template{% endif %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="format-detection" content="telephone=no"/>
+
+  <meta property="og:title" content="{% if title %}{{ title }}{% else %}Template{% endif %}">
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}Template{% endif %}">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-32.png">
+
+  <link rel="stylesheet" href="/css/app.css"/>
+
+
+ <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SMCZJM0FW7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-SMCZJM0FW7");
+    </script>
+    
+  
+</head>

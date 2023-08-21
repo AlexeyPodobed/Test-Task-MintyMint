@@ -1,0 +1,134 @@
+.header {
+	$this: &;
+
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: map-get($z-index, header);
+	width: 100%;
+	background: $c-white;
+	@include mobile{
+		position: fixed;
+	}
+
+	&__inner {
+		width: 100%;
+		padding-top: 33px;
+		padding-bottom: 37px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include mobile{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__left-controls {
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo-link {
+		margin-right: 64px;
+		@include mobile {
+			margin-right: 0;
+		}
+		svg {
+			width: 127px;
+			min-width: 127px;
+			height: 36px;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		max-width: 300px;
+		min-width: 300px;
+		&--desktop {
+			@include mobile {
+				display: none;
+			}
+		}
+	}
+	&__nav-list {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__nav-drop {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		@include hover {
+			#{$this}__drop-arrow {
+				transform: rotate(-45deg) translateX(-3px);
+				border-top: 2px solid $c-black;
+				border-right: 2px solid $c-black;
+			}
+			#{$this}__nav-link {
+				color: $c-black;
+			}
+		}
+	}
+	&__drop-arrow {
+		width: 7px;
+		height: 7px;
+		margin-top: -2px;
+		margin-left: 15px;
+		border-top: 2px solid $c-gray;
+		border-right: 2px solid $c-gray;
+		transform: rotate(135deg);
+		transition: $time-sm;
+	}
+
+	&__nav-link {
+		display: flex;
+		transition: $time-sm;
+	}
+
+	&__right-controls{
+		@include mobile{
+			margin-left: auto;
+			margin-right: 20px;
+		}
+		@include mobile-midi{
+			margin-right: 10px;
+		}
+	}
+	&__btn-start {
+		width: fit-content;
+		min-width: 169px;
+		height: 46px;
+		padding: 0 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		border: 2px solid $l-gray;
+		transition: $time-sm;
+		@include mobile{
+			min-width: fit-content;
+			height: 40px;
+			padding: 0 5px;
+		}
+		&:hover {
+			background: $c-blue;
+			border: 2px solid transparent;
+			span {
+				color: $c-white;
+			}
+		}
+		span {
+			pointer-events: none;
+			@include mobile{
+				font-size: 15px;
+			}
+		}
+	}
+}

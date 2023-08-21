@@ -1,0 +1,170 @@
+.blog {
+	$this: &;
+
+	position: relative;
+	width: 100%;
+	padding-top: 96px;
+	padding-bottom: 150px;
+	@include mobile{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__subtitle {
+		position: relative;
+		left: -10px;
+		margin-bottom: 9px;
+		@include mobile{
+			left: 0;
+		}
+	}
+
+	&__title {
+		position: relative;
+		left: -10px;
+		max-width: 585px;
+		margin: 0 auto;
+		margin-bottom: 52px;
+		@include mobile{
+			left: 0;
+			margin-bottom: 20px;
+		}
+	}
+	&__content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding-left: 47px;
+		@include laptop {
+			padding-left: 0;
+		}
+		@include laptopMini{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__item-wrap {
+		@include laptopMini {
+			width: 35%;
+			display: flex;
+			justify-content: center;
+		}
+		@include mobile{
+			width: 50%;
+		}
+		@include mobile-midi{
+			width: 100%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: fit-content;
+		max-width: 297px;
+		min-width: 239px;
+		min-height: 195px;
+		cursor: pointer;
+		@include laptopMini{
+			margin-bottom: 30px;
+		}
+		&:hover {
+			#{$this}__item-cover {
+				opacity: 1;
+				pointer-events: visible;
+			}
+
+			#{$this}__item-img {
+				img {
+					filter: grayscale(1);
+				}
+			}
+
+			#{$this}__item-title {
+				color: $d-black;
+			}
+
+			#{$this}__item-text {
+				color: $d-black;
+			}
+		}
+
+		&:first-child {
+			margin-right: 8px;
+			@include mobile{
+				margin-right: 0;
+			}
+		}
+
+		&--s {
+			max-width: 236px;
+			min-width: 236px;
+		}
+
+		&--m {
+			max-width: 274px;
+			min-width: 239px;
+		}
+		&--l {
+			max-width: 297px;
+			min-width: 239px;
+			#{$this}__item-title {
+				max-width: 265px;
+			}
+		}
+
+		&--height {
+			margin-top: -15px;
+
+			#{$this}__item-cover {
+				top: calc(50% + 7px);
+				min-height: calc(100% - 44px);
+			}
+		}
+	}
+
+	&__item-img {
+		position: relative;
+		margin-bottom: 17px;
+		transition: $time-sm;
+		img {
+			transition: $time-sm;
+		}
+	}
+
+	&__item-cover {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% - 34px);
+		min-height: calc(100% - 34px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 3px solid $c-white;
+		opacity: 0;
+		pointer-events: none;
+		transition: $time-sm;
+	}
+
+	&__item-link {
+		width: 33px;
+		min-width: 33px;
+		height: 33px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	&__item-title {
+		margin-bottom: 8px;
+		transition: $time-sm;
+		&--m-width {
+			max-width: 270px;
+		}
+	}
+	&__item-text {
+		transition: $time-sm;
+	}
+}

@@ -1,0 +1,328 @@
+.title {
+	font-family: $font-default;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 1px;
+
+	&--xxl {
+		font-size: 130px;
+		letter-spacing: 0.24px;
+
+		@include tabletMaxi {
+			font-size: 96px;
+		}
+
+		@include mobile {
+			font-size: 46px;
+		}
+
+		@include mobile-micro {
+			font-size: 44px;
+		}
+	}
+
+	&--x {
+		font-size: 126px;
+		// line-height: calc(151/126);
+		letter-spacing: 0.24px;
+
+		@include tabletMaxi {
+			font-size: 96px;
+		}
+
+		@include mobile {
+			font-size: 46px;
+		}
+	}
+
+	&--xl {
+		font-size: 80px;
+
+		@include tabletMaxi {
+			font-size: 48px;
+		}
+
+		@include mobile {
+			font-size: 24px;
+		}
+	}
+
+	&--l {
+		font-size: 64px;
+
+		@include tabletMaxi {
+			font-size: 44px;
+		}
+
+		@include mobile {
+			font-size: 20px;
+		}
+	}
+
+	&--lm {
+		font-size: 50px;
+		line-height: calc(65 / 50);
+
+		@include tabletMaxi {
+			font-size: 44px;
+		}
+
+		@include mobile {
+			font-size: 20px;
+		}
+	}
+
+	&--m {
+		font-size: 48px;
+		letter-spacing: 0.3px;
+		line-height: calc(66 / 48);
+
+		@include tabletMaxi {
+			font-size: 24px;
+		}
+	}
+
+	&--s {
+		font-size: 34px;
+		letter-spacing: 0.1px;
+		line-height: calc(46 / 34);
+
+		@include tabletMaxi {
+			font-size: 26px;
+		}
+
+		@include mobile {
+			font-size: 20px;
+		}
+	}
+
+	&--xs {
+		font-size: 24px;
+		line-height: calc(31 / 24);
+
+		// @include tabletMaxi {
+		// 	font-size: 26px;
+		// }
+
+		// @include mobile {
+		// 	font-size: 20px;
+		// }
+	}
+
+	&--xxs {
+		font-size: 21px;
+		letter-spacing: 0.1px;
+
+		@include tabletMaxi {
+			font-size: 18px;
+		}
+	}
+	&--xxxs {
+		font-size: 16px;
+		letter-spacing: 0px;
+		line-height: calc(25 / 16);
+	}
+
+	&--extra-bold {
+		font-weight: 800;
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	&--semi-bold {
+		font-weight: 600;
+	}
+	&--uppercase {
+		text-transform: uppercase;
+	}
+}
+
+.txt {
+	p,
+	ul,
+	ol,
+	li {
+		&:not(:last-child) {
+			margin-bottom: 1em;
+		}
+	}
+
+	b,
+	strong {
+		font-weight: 700;
+	}
+
+	i,
+	em {
+		font-style: italic;
+	}
+
+	// a {
+	// 	text-decoration: underline;
+
+	// 	@include hover {
+	// 		text-decoration: none;
+	// 	}
+	// }
+
+	&--xl {
+		font-size: 40px;
+		line-height: calc(50.28 / 40);
+
+		@include mobile {
+			font-size: 20px;
+			line-height: 1.25;
+		}
+	}
+
+	&--x {
+		font-size: 34px;
+		line-height: 1.25;
+		letter-spacing: 0.68px;
+
+		@include mobile {
+			font-size: 18px;
+		}
+	}
+
+	&--l {
+		//default body styles
+		font-size: 28px;
+		line-height: calc(35.2 / 28);
+
+		@include mobile {
+			font-size: 18px;
+			line-height: calc(22 / 18);
+		}
+	}
+
+	&--lm {
+		//default body styles
+		font-size: 24px;
+		line-height: 1;
+
+		@include mobile {
+			font-size: 18px;
+		}
+	}
+
+	&--m {
+		font-size: 21px;
+		letter-spacing: 0.3px;
+		line-height: calc(35 / 21);
+	
+
+		@include mobile {
+			font-size: 18px;
+			line-height: calc(28 / 18);
+		}
+	}
+
+	&--sm {
+		font-size: 20px;
+		line-height: 1;
+		letter-spacing: 0.4px;
+
+		@include mobile {
+			font-size: 18px;
+			line-height: calc(22 / 18);
+		}
+	}
+
+	&--ssm {
+		font-size: 18px;
+		letter-spacing: 0.01px;
+		line-height: calc(34 / 18);
+	}
+
+	&--s {
+		font-size: 17px;
+		letter-spacing: 0.34px;
+		line-height: 1;
+	}
+	&--xs {
+		font-size: 16px;
+		letter-spacing: 0.1px;
+		line-height: calc(28 / 16);
+	}
+	&--xxs {
+		font-size: 14px;
+		letter-spacing: 0.1px;
+		line-height: calc(18 / 14);
+	}
+
+	&--xxxs {
+		font-size: 12px;
+		line-height: calc(18 / 12);
+	}
+
+	&--extra-bold {
+		font-weight: 800;
+	}
+
+	&--bold {
+		font-weight: 700;
+	}
+
+	&--semi-bold {
+		font-weight: 600;
+	}
+}
+
+.color-white {
+	color: $c-white;
+}
+
+.color-black {
+	color: $m-black;
+}
+
+.color-c-black {
+	color: $c-black;
+}
+
+.color-l-black {
+	color: $l-black;
+}
+
+.color-gray {
+	color: $c-gray;
+}
+
+.color-l-gray {
+	color: $l-gray;
+}
+
+.color-f-gray {
+	color: $f-gray;
+}
+
+.color-red {
+	color: $c-red;
+}
+
+.color-l-blue {
+	color: $l-blue;
+}
+
+.color-d-blue {
+	color: $d-blue;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}

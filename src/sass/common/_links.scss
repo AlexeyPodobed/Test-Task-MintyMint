@@ -1,0 +1,6 @@
+.link {
+	transition: $time-sm;
+	@include hover{
+		color: $c-black;
+	}
+}
