@@ -33,7 +33,6 @@
 			
 			modalButtons.forEach((button) => {
 				button.addEventListener('click', function () {
-					console.log('modal btn click', button);
 					const modalId = button.getAttribute('data-modal');
 					if (modalId) {
 						gtag('event', 'modal_open', {
